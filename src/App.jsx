@@ -18,12 +18,12 @@ function App() {
         <SideBar />
         <Routes className="w-10/12 min-h-screen">
           <Route path='/' element={<Home />}>
-            <Route index element={<ToDoList />} />
-            <Route path='/add' element={<AddList />} />
-            <Route path='/:id' element={<Edit />} />
+            <Route index element={<ChooseUser />} />
+            <Route path='/to-do-list' element={<ToDoList />} />
+            <Route path='/to-do-list/add' element={<AddList />} />
+            <Route path='/to-do-list/:id' element={<Edit />} />
           </Route>
           <Route path='/weather' element={<WeatherLocation />} />
-          <Route path='/user' element={<ChooseUser />} />
         </Routes>
       </div>
     </div>

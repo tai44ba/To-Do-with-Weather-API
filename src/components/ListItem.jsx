@@ -50,7 +50,7 @@ const ListItem = ({ item }) => {
                 </div>
                 <div className="flex gap-x-6 mx-3">
                     {item.checked && <button className={`text-2xl  ${IsDone&&"text-slate-400"}`} disabled><IoRainyOutline className={IsRain&&item.checked&&'text-4xl text-yellow-300'}/></button>}
-                    <button className={`text-2xl  ${IsDone&&"text-slate-400"}`} ><NavLink to={IsDone?'/':item._id}><FaEdit className="hover:text-yellow-600 active:text-yellow-500"/></NavLink></button>
+                    <button className={`text-2xl  ${IsDone&&"text-slate-400"}`} ><NavLink to={IsDone?'/to-do-list':item._id}><FaEdit className="hover:text-yellow-600 active:text-yellow-500"/></NavLink></button>
                     <button onClick={()=> setIsProgress(!IsProgress)} className={`text-2xl  ${IsProgress&&"text-red-500"||IsDone&&"text-slate-400"}`} disabled={IsDone}><RiProgress3Line className="hover:text-yellow-600 active:text-yellow-500" /></button>
                     <button className={`text-2xl  ${IsDone&&"text-slate-400"}`} onClick={()=>dispatch({type:"DELETE",payload:item})} disabled={IsDone}><RiDeleteBin6Line className="hover:text-yellow-600 active:text-yellow-500" /></button>
                     <button className={`text-2xl  ${IsDone&&"text-slate-400"}`} onClick={() => setIsOpen(!IsOpen)} disabled={IsDone}><FaAngleDown className="hover:text-yellow-600 active:text-yellow-500" /></button>

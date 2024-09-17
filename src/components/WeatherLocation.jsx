@@ -14,7 +14,8 @@ const WeatherLocation = () => {
     console.log(location)
     console.log(wData);
     return (
-        <div className="flex flex-col justify-around w-9/12">
+        <div className="flex flex-col justify-around w-9/12 p-3">
+            <h2 className='text-center text-5xl'>Choose the location</h2>
             <div className="flex flex-col items-center">
                 <form onSubmit={submitHandler}>
                     <input type="text" className="text-xl px-2 py-1 glassBgH" placeholder="Enter your city..." onChange={(e) => {

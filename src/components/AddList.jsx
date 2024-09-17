@@ -30,7 +30,7 @@ const AddList = () => {
         e.preventDefault()
         if (listItem.title&&listItem.date&&listItem.difficulty) {
             dispatch({ type: "ADD_TO_LIST", payload: { ...listItem, _id: uuidv4() } })
-            navigate("/")
+            navigate("/to-do-list")
         } else {
             alert("Please fill out at least Title, Date, Difficulty")
         }
@@ -38,9 +38,9 @@ const AddList = () => {
 
     return (
         <div>
+            <h2 className='text-center text-5xl'>Create a new to-do list</h2>
             <form onSubmit={submitHandler}>
-                <div className='flex flex-col mt-10 pt-10'>
-
+                <div className='flex flex-col mt-5 pt-5'>
                     <input type="text" name='title' placeholder='Task name' className='glassBg px-2 py-1 text-xl' onChange={inputHandler} />
                     <div className='my-2' >
                         <label htmlFor="check" className='text-lg'>If it is not possible to do it when it is rain</label>

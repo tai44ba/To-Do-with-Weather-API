@@ -27,13 +27,14 @@ const Edit = () => {
     const submitHandler = (e) => {
         e.preventDefault()
         dispatch({type:"UPDATE_LIST_ITEM",payload:choseListItem})
-        navigate('/')
+        navigate('/to-do-list')
     }
 
     return (
         <div>
+            <h2 className='text-center text-5xl'>Edit your list</h2>
             <form onSubmit={submitHandler}>
-                <div className='flex flex-col mt-10 pt-10'>
+                <div className='flex flex-col mt-5 pt-5'>
                     <input type="text" name='title' placeholder='Task name' className='glassBg px-2 py-1 text-xl' onChange={inputHandler} value={choseListItem.title} />
                     <div className='my-2' >
                         <label htmlFor="check" className="text-lg">If it is not possible to do it when it is rain : </label>

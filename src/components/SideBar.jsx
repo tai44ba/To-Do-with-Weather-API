@@ -9,9 +9,9 @@ const SideBar = () => {
             <nav>
                 <User />
                 <ul>
-                    <NavLink to='/user'><li className="text-xl px-2 my-1 py-1 glassBg hover:glassBgH">User</li></NavLink>
-                    <NavLink to='/'><li className=" text-xl px-2 my-1 py-1 glassBg hover:glassBgH">To-Do LIst</li></NavLink>
-                    <NavLink to='/weather'><li className="text-xl px-2 my-1 py-1 glassBg hover:glassBgH ">Weather</li></NavLink>
+                    <NavLink to='/'><li className="text-xl px-3 my-1 py-1 glassBg hover:glassBgH">User</li></NavLink>
+                    <NavLink to='/to-do-list'><li className=" text-xl px-3 my-1 py-1 glassBg hover:glassBgH">To-Do LIst</li></NavLink>
+                    <NavLink to='/weather'><li className="text-xl px-3 my-1 py-1 glassBg hover:glassBgH ">Weather</li></NavLink>
                 </ul>
                 <div className='relative'>
                     <Weather />

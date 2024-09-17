@@ -15,13 +15,14 @@ const ChooseUser = () => {
     if (userInfo.location && userInfo.username) {
       localStorage.setItem('point', 0)
       dispatch({ type: 'CHOOSE_USER', payload: userInfo })
-      navigate('/')
+      navigate('/to-do-list')
     } else {
       alert("Please fill all inputs")
     }
   }
   return (
-    <div className="flex flex-col justify-around w-9/12">
+    <div className="flex flex-col justify-around w-12/12 mt-20">
+      <h2 className="text-center m-3 p-3 text-5xl">Fill out to easy start !!</h2>
       <form onSubmit={submitHandler} className="glassBgUser mx-10">
         <div className="flex flex-col items-center my-3">
           <label className="text-xl">Where are you at ??</label>
